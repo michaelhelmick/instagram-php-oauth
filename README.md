@@ -10,7 +10,7 @@
 This is class written to work with Instagram OAuth methods. It authorizes a user and will let you make requests to Instagram API.
 
 ##Usage
-* Edit the CONFIG file in the 'src' folder to accommodate your client_id, client_secret and redirect uri.
+* Edit the CONFIG file in the 'src' folder to accommodate your *CLIENT_ID*, *CLIENT_SECRET* and *REDIRECT_URI*.
 * Customize callback.php to possibly save tokens to a database in case the user revisits your app.
 * Customize index.php to your liking and expand your app.
 * Happy coding!
