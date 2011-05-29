@@ -25,16 +25,16 @@
 **/
 
 class Instagram {
-    private $apiBase = 'https://api.instagram.com';
+    private $apiBase = 'https://api.instagram.com/';
     private $apiUrl = 'https://api.instagram.com/v1/';
     
     protected $client_id;
     protected $client_secret;
     protected $access_token;
     
-    public function accessTokenUrl()  { return 'https://api.instagram.com/oauth/access_token/'; }
+    public function accessTokenUrl()  { return $this->apiBase.'oauth/access_token/'; }
     public function authorizeUrl($redirect_uri, $scope = array('basic'), $response_type = 'code'){
-        return $this->apiBase.'/oauth/authorize/?client_id='.$this->client_id.'&redirect_uri='.$redirect_uri.'&response_type='.$response_type.'&scope='.implode('+', $scope);
+        return $this->apiBase.'oauth/authorize/?client_id='.$this->client_id.'&redirect_uri='.$redirect_uri.'&response_type='.$response_type.'&scope='.implode('+', $scope);
     }
     
     public function __construct($client_id='', $client_secret='', $access_token = '')
